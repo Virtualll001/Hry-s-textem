@@ -1,0 +1,98 @@
+﻿<Window x:Name="MainWidow" x:Class="HrySTextem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HrySTextem"
+        mc:Ignorable="d"
+        Title="Hry s textem" Height="950" Width="600" Icon="/favico.png" WindowStartupLocation="CenterScreen" Background="#FFEDFFE3" Foreground="#FF0E2700" ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="85*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215"/>
+            <ColumnDefinition Width="275"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="zadejTextLabel" Grid.Row="0" Content="Zadejte větu k rozboru:" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Foreground="#FF004006" FontSize="16"/>
+        <TextBox x:Name="zadejTextBox" Grid.Row="0" Grid.Column="1" Padding="5, 5, 0, 0" AutomationProperties.IsRequiredForForm="True" TextWrapping="WrapWithOverflow" Background="{x:Null}" MaxLength="60" MaxLines="2" Margin="15,0,-55,0" BorderThickness="0,0,0,1" FontSize="16" />
+
+        <Label x:Name="vyhledejTextLabel" Grid.Row="1" Content="Zadejte jeden znak k vyhledání:" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontStyle="Normal" Foreground="#FF004006" FontSize="14"/>
+        <TextBox x:Name="vyhledejTextBox" Grid.Column="1" Padding="5, 5, 0, 0" AutomationProperties.IsRequiredForForm="True" TextWrapping="WrapWithOverflow" Margin="15,2,230,1" MaxLength="1" MaxLines="1" BorderThickness="0,0,0,1" SnapsToDevicePixels="True" Background="{x:Null}" Grid.Row="1" FontSize="14" />
+
+        <Button Content="Analyzuj" Width="120" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center" BorderBrush="#FF277000" Background="#FF8AFF4C" Click="Button_Click"/>
+
+        <TextBlock Text="Hledaný znak se v textu vyskytuje: " Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Převod na velká písmena: " Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Převod na malá písmena: " Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Převrácená velikost písmen: " Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Otočená slova ve větě: " Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Otočená písmena ve slově: " Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Obrácená věta i písmena: " Grid.Row="9" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="První znak: " Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Poslení znak: " Grid.Row="11" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Počet slov: " Grid.Row="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Počet znaků celkem: " Grid.Row="13" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Nejdelší slovo: " Grid.Row="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Samohlásky: " Grid.Row="15" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Dlouhé samohlásky: " Grid.Row="16" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Souhlásky: " Grid.Row="17" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Tvrdé souhlásky: " Grid.Row="18" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Měkké souhlásky: " Grid.Row="19" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Další písmena: " Grid.Row="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Čísla: " Grid.Row="21" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Závorky: " Grid.Row="22" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Speciální znaky: " Grid.Row="23" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0"/>
+        <TextBlock Text="Text převedený na morseovku: " Grid.Row="24" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,0,0,0" FontWeight="Bold"/>
+
+        <TextBlock x:Name="xKratTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="velkaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="malaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="prevracenaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="otocSlovaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="7" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="otocPismenaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="8" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="otocVetaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="9" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="prvniZnakVetaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="10" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="posledniZnakVetaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="11" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="pocetSlovTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="12" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="pocetZnakuTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="13" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="nejdelsiTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="14" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="samohlaskyTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="15" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="dlouhSamohlTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="16" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="souhlaskyTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="17" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="tvrdeSouhlTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="18" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="mekkeSouhlTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="19" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="dalsiTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="20" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="cislaTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="21" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="zavorkyTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="22" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="znakyTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="23" TextWrapping="Wrap" VerticalAlignment="Center" Width="274" Height="16" />
+        <TextBlock x:Name="morseTextBlock" Grid.Row="25" TextWrapping="WrapWithOverflow"  VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="15" Margin="5,0,-70,0" Height="88" />
+
+    </Grid>
+</Window>
